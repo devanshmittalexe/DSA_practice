@@ -1,10 +1,15 @@
+// updated code
 class Solution {
 public:
     void moveZeroes(vector<int>& nums) {
-        int n=nums.size();
+        int p1=-1,p2=0,n=nums.size();
+        queue<int>a;
         for(int i=0;i<n;i++){
-            for(int j=0;j<n-i-1;j++){
-                if(nums[j]==0) swap(nums[j],nums[j+1]);
+            if(nums[i]==0) a.push(i);
+            else if(a.size()>0){
+                swap(nums[i],nums[a.front()]);
+                a.pop();
+                a.push(i);
             }
         }
     }
