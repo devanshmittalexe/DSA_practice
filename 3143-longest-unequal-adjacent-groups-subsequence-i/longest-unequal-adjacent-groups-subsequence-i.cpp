@@ -5,7 +5,7 @@ public:
         int t=groups[0],n=words.size();
         for(int i=0;i<n;i++){
             if(groups[i]==t){
-                t=!groups[i];
+                t=!t;
                 ans.push_back(words[i]);
             }
         }
