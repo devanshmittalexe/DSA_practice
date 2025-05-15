@@ -1,3 +1,4 @@
+//best code
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
