@@ -1,11 +1,6 @@
 class Solution {
 public:
     void solve(vector<int>&nums,int p1,int p2,int p3){
-        cout<<p1<<" "<<p2<<" "<<p3<<endl;
-        for(auto &i:nums){
-            cout<<i<<" ";
-        }
-        cout<<endl;
         if(p2>=p3) return;
         if(nums[p1]==0 &&nums[p3]==2){
             solve(nums,p1+1,p2=p1+1,p3-1);
