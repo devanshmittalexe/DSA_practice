@@ -1,3 +1,7 @@
+// MOST OPTIMAL SOLUTION
+// USING PIGEON HOLE PRINCIPLE IN PLACE BY MARKING NUMBERS USING NEGATIVE
+// VERY TRICKY QUESTION
+// USED REFERENCE VARIABLE TO DECREASE THE RUNTIME IN FIRST FOR LOOP;
 class Solution {
 public:
     int firstMissingPositive(vector<int>& nums) {
@@ -6,8 +10,6 @@ public:
             int &z=nums[i];
             if(z<1 || z>n) z=n+1;
         }
-        // for(int i=0;i<n;i++) cout<<nums[i]<<" ";
-        // cout<<endl;
         for(int i=0;i<n;i++){
             int temp=abs(nums[i]);
             if((temp-1<n) && nums[temp-1]>0) nums[temp-1]*=-1;
