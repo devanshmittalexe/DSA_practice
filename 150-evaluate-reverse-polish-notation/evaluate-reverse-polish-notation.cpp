@@ -1,3 +1,6 @@
+// optimized code, beats 100 percent sometimes
+// used switchcase to decrease the runtime
+// good question overall
 class Solution {
 public:
     int evalRPN(vector<string>& tokens) {
