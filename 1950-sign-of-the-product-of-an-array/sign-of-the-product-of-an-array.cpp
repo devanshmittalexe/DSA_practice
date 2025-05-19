@@ -1,3 +1,4 @@
+// optimal solution no doing all the simulation
 class Solution {
 public:
     int arraySign(vector<int>& nums) {
