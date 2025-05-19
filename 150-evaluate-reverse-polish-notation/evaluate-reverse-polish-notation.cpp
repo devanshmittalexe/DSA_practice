@@ -1,22 +1,22 @@
 class Solution {
 public:
     int evalRPN(vector<string>& tokens) {
-        stack<int>s;
+        stack<string>s;
         int a,b;
         for(auto &i:tokens){
             if(i=="+" ||i=="/" ||i=="*" ||i=="-"){
-                a=s.top();
+                a=stoi(s.top());
                 s.pop();
-                b=s.top();
+                b=stoi(s.top());
                 s.pop();
                 if(i=="+") a=a+b;
                 else if(i=="-") a=b-a;
                 else if(i=="*") a=a*b;
                 else a=b/a;
-                s.push(a);
+                s.push(to_string(a));
             }
-            else s.push(stoi(i));
+            else s.push(i);
         }
-        return s.top();
+        return stoi(s.top());
     }
 };
