@@ -9,11 +9,10 @@ public:
                 s.pop();
                 b=s.top();
                 s.pop();
-                if(i=="+") a=a+b;
-                else if(i=="-") a=b-a;
-                else if(i=="*") a=a*b;
-                else a=b/a;
-                s.push(a);
+                if(i=="+") s.push(a+b);
+                else if(i=="-") s.push(b-a);
+                else if(i=="*") s.push(a*b);
+                else s.push(b/a);
             }
             else s.push(stoi(i));
         }
