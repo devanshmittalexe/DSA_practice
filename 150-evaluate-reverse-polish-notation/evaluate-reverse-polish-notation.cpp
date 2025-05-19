@@ -15,10 +15,6 @@ public:
                     case '*': s.push(a*b); break;
                     case '/': s.push(b/a); break;
                 }
-                // if(i=="+") s.push(a+b);
-                // else if(i=="-") s.push(b-a);
-                // else if(i=="*") s.push(a*b);
-                // else s.push(b/a);
             }
             else s.push(stoi(i));
         }
