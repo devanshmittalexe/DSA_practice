@@ -1,11 +1,17 @@
 class Solution {
 public:
     bool checkPerfectNumber(int num) {
-        int s=0;
-        int temp=num/2;
-        for(int i=1;i<=temp;i++){
-            if(num%i==0) s+=i;
+        if(num==1) return 0;
+        int s=1;
+        for(int i=2;i*i<=num;i++){
+            if(num%i==0){
+                s+=i;
+                cout<<i;
+                s+=num/i;
+                cout<<num/i<<endl;
+            }
         }
+        cout<<s<<endl;
         return s==num;
     }
 };
