@@ -24,7 +24,6 @@ public:
             h=h->next;
         }
         h->next=h->next->next;
-        cout<<N;
         return head;
     }
 };
