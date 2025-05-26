@@ -1,21 +1,29 @@
 class Solution {
 public:
     int longestPalindrome(vector<string>& words) {
-        unordered_map<string,int>mp;
-        string g;
-        int ans=0;
-        for(auto &i:words){
-            g=i;
-            swap(g[0],g[1]);
-            if(mp.count(g) && mp[g]>0){
-                mp[g]--;
-                ans+=4;
+        unordered_map<string, int> mp;
+        int ans = 0;
+        bool hasCenter = false;
+
+        for (const string& word : words) {
+            string rev = word;
+            swap(rev[0], rev[1]);
+
+            if (mp[rev] > 0) {
+                mp[rev]--;
+                ans += 4;
+            } else {
+                mp[word]++;
             }
-            else mp[i]++;
         }
-        for(auto &[i,j]:mp){
-            if(i[0]==i[1] && j>0) return ans+2;
+
+        for (const auto& [word, count] : mp) {
+            if (word[0] == word[1] && count > 0) {
+                ans += 2;
+                break;
+            }
         }
+
         return ans;
     }
 };
