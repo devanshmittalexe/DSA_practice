@@ -19,30 +19,3 @@ public:
         return ans;
     }
 };
-// class Solution {
-// public:
-//     int longestPalindrome(vector<string>& words) {
-//         unordered_set<string>s;
-//         unordered_map<string,int>m;
-//         int ma=0;
-//         int ans=0;
-//         for(auto &i:words){
-//             string g=i;
-//             swap(g[0],g[1]);
-//             if(s.count(g)){
-//                 ans+=4;
-//                 s.erase(g);
-//             }
-//             // if(g[0]==g[1]){
-//             //     m[g]++;
-//             //     if(m[g]>ma) ma=m[g];
-//             // }
-//             else s.insert(i);
-//         }
-//         for(auto &i:s){
-//             if(i[0]==i[1]) return ans+2;
-//         }
-//         return ans;
-//     }
-// };
-
