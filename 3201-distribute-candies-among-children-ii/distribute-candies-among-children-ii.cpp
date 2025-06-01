@@ -1,4 +1,6 @@
 // hard question but done sucessfully
+// https://www.youtube.com/watch?v=eL_3cDp0zjE&t=2502s
+// took help from this video
 class Solution {
 public:
     long long distributeCandies(int n, int limit) {
