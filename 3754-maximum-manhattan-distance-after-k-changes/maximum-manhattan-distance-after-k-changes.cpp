@@ -1,3 +1,4 @@
+// optimal solution
 class Solution {
 public:
     int maxDistance(string S, int k) {
